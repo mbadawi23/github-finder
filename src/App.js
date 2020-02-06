@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Navbar from './components/layout/Navbar';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
       <div className='App'>
