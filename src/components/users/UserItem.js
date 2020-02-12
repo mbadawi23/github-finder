@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 const UserItem = ({ user: { login, avatar_url, html_url } }) => {
   return (
@@ -17,6 +18,10 @@ const UserItem = ({ user: { login, avatar_url, html_url } }) => {
       </div>
     </div>
   );
+};
+
+UserItem.propTypes = {
+  user: propTypes.object.isRequired
 };
 
 export default UserItem;
