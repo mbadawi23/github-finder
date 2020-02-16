@@ -5,6 +5,11 @@ import Navbar from './components/layout/Navbar';
 import Users from './components/users/Users';
 
 class App extends Component {
+  async componentDidMount() {
+    const res = await axios.get('https://api.github.com/users');
+    console.log(res.data);
+  }
+
   render() {
     return (
       <div className='App'>
