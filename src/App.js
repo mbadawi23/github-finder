@@ -29,7 +29,12 @@ class App extends Component {
   // Clear users from state
   clearUsers = () => this.setState({ users: [], loading: false });
 
-  setAlert = (msg, type) => this.setState({ alert: { msg, type } });
+  setAlert = (msg, type) => {
+    this.setState({ alert: { msg, type } });
+    setTimeout(() => {
+      this.setState({ alert: null });
+    }, 5000);
+  };
 
   render() {
     const { users, loading, alert } = this.state;
