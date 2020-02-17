@@ -7,10 +7,15 @@ class Search extends Component {
 
   onChange = e => this.setState({ [e.target.name]: e.target.value });
 
+  onSubmit = e => {
+    e.preventDefault();
+    this.props.searchUsers(this.state.text);
+    this.setState({ text: '' });
+  };
   render() {
     return (
       <div>
-        <form className='form'>
+        <form onSubmit={this.onSubmit} className='form'>
           <input
             type='text'
             name='text'
