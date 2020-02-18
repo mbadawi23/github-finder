@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import Spinner from '../layout/Spinner';
 
@@ -31,7 +32,14 @@ export class User extends Component {
     } = this.props.user;
 
     const { loading } = this.props;
-    return <div>{name}</div>;
+    if (loading) return <Spinner />;
+    return (
+      <Fragment>
+        <Link to='/' className='btn btn-light'>
+          Back to search
+        </Link>
+      </Fragment>
+    );
   }
 }
 
