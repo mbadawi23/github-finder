@@ -28,7 +28,8 @@ export class User extends Component {
       following,
       public_repos,
       public_gists,
-      hireable
+      hireable,
+      company
     } = this.props.user;
 
     const { loading } = this.props;
@@ -60,12 +61,41 @@ export class User extends Component {
               <Fragment>
                 <h3>Biography</h3>
                 <p>{bio}</p>
-                <a href={html_url} className='btn btn-light my-1'>
-                  Visit Github Profile
-                </a>
               </Fragment>
             )}
+            <a href={html_url} className='btn btn-light my-1'>
+              Visit Github Profile
+            </a>
+            <ul>
+              <li>
+                {login && (
+                  <Fragment>
+                    <strong>Username:</strong> {login}
+                  </Fragment>
+                )}
+              </li>
+              <li>
+                {company && (
+                  <Fragment>
+                    <strong>Company:</strong> {company}
+                  </Fragment>
+                )}
+              </li>
+              <li>
+                {blog && (
+                  <Fragment>
+                    <strong>Blog:</strong> {blog}
+                  </Fragment>
+                )}
+              </li>
+            </ul>
           </div>
+        </div>
+        <div className='card text-center'>
+          <div className='badge badge-success'>Followers: {followers}</div>
+          <div className='badge badge-light'>Following: {following}</div>
+          <div className='badge badge-primary'>Repos: {public_repos}</div>
+          <div className='badge badge-dark'>Gists: {public_gists}</div>
         </div>
       </Fragment>
     );
