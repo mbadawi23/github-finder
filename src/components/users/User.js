@@ -21,7 +21,7 @@ export class User extends Component {
     } = this.props.user;
 
     const { loading } = this.props;
-    return <div>User</div>;
+    return <div>{name}</div>;
   }
 }
 
