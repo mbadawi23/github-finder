@@ -39,6 +39,9 @@ class App extends Component {
     }, 5000);
   };
 
+  // Get a single Github user
+  getUser = async username => {};
+
   render() {
     const { users, loading, alert } = this.state;
     return (
