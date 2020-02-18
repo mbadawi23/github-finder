@@ -60,6 +60,9 @@ export class User extends Component {
               <Fragment>
                 <h3>Biography</h3>
                 <p>{bio}</p>
+                <a href={html_url} className='btn btn-light my-1'>
+                  Visit Github Profile
+                </a>
               </Fragment>
             )}
           </div>
