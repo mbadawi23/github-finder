@@ -55,6 +55,14 @@ export class User extends Component {
             <h1>{name}</h1>
             <p>Location: {location}</p>
           </div>
+          <div>
+            {bio && (
+              <Fragment>
+                <h3>Biography</h3>
+                <p>{bio}</p>
+              </Fragment>
+            )}
+          </div>
         </div>
       </Fragment>
     );
