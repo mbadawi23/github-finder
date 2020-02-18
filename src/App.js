@@ -28,7 +28,7 @@ class App extends Component {
       `https://api.github.com/search/users?q=${text}&client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
 
-    this.setState({ user: res.data, loading: false });
+    this.setState({ users: res.data.items, loading: false });
   };
 
   // Clear users from state
@@ -50,7 +50,7 @@ class App extends Component {
       `https://api.github.com/search/users/${username}?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
     );
 
-    this.setState({ users: res.data.items, loading: false });
+    this.setState({ user: res.data, loading: false });
   };
 
   render() {
