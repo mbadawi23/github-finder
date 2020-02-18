@@ -52,6 +52,8 @@ export class User extends Component {
               style={{ width: '150px' }}
               alt='avatar'
             />
+            <h1>{name}</h1>
+            <p>Location: {location}</p>
           </div>
         </div>
       </Fragment>
