@@ -19,6 +19,8 @@ export class User extends Component {
       public_gists,
       hireable
     } = this.props.user;
+
+    const { loading } = this.props;
     return <div>User</div>;
   }
 }
