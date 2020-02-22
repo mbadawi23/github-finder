@@ -31,6 +31,7 @@ const GithubState = props => {
   // Get Repos
 
   // Set Loading
+  const setLoading = () => dispatch({ type: SET_LOADING });
 
   return (
     <GithubContext.Provider
