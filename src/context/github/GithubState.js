@@ -2,7 +2,7 @@
 
 import React, { useReducer } from 'react';
 import axios from 'axios';
-import GithubContext from './githubContext';
+import GithubContext from './GithubContext';
 import GithubReducer from './githubReducer';
 import {
   SEARCH_USERS,
