@@ -40,11 +40,7 @@ const App = () => {
                 )}
               />
               <Route exact path='/about' component={About} />
-              <Route
-                exact
-                path='/user/:login'
-                render={login => <User {...login} />}
-              />
+              <Route exact path='/user/:login' component={User} />
             </Switch>
           </div>
         </div>
